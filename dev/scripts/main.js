@@ -12,10 +12,18 @@ app.randomNum = () => Math.floor(Math.random()*10);
 //API Calls
 //----------
 app.getGiphy = (memeKeyword) => {
-    const xhr = $.get(`http://api.giphy.com/v1/gifs/search?q=${memeKeyword}&api_key=${app.giphyKey}&limit=10`);
-    xhr.done(function (data) { 
+    $.ajax({
+        url: `https://api.giphy.com/v1/gifs/search?api_key=${app.giphyKey}=&limit=10&offset=0&rating=G&lang=en`,
+        method: 'Get',
+        dataType: 'json',
+        q: memeKeyword,
+        timeout: 5000,
+        error: function (xhr, textStatus, errorThrown) {
+            alert('Something bad happened to the Giphy API, NOOOOOO not the memes!');
+        }
+    }).then(function (res) {
         let randomPull = app.randomNum();
-        console.log("success got data", data); 
+        console.log("success got data", data);
         const $giphy = $('.giphy');
         $giphy.empty();
         $giphy.append(`
@@ -26,6 +34,22 @@ app.getGiphy = (memeKeyword) => {
             </iframe>
         `);
     });
+
+    
+    // const xhr = $.get(`http://api.giphy.com/v1/gifs/search?q=${memeKeyword}&api_key=${app.giphyKey}&limit=10`);
+    // xhr.done(function (data) { 
+    //     let randomPull = app.randomNum();
+    //     console.log("success got data", data); 
+    //     const $giphy = $('.giphy');
+    //     $giphy.empty();
+    //     $giphy.append(`
+    //         <iframe 
+    //             src="${data.data[randomPull].embed_url}" 
+    //             frameBorder="0" 
+    //             class="giphy-embed" allowFullScreen>
+    //         </iframe>
+    //     `);
+    //});
 } ;
 
 //FunTranslation public API calls allows for 60 API calls a day with distribution of 5 calls an hour. 
