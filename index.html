@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--Twitter Meta Tags-->
+	<meta name="twitter:card" content="Be Accellent - find your new accent!">
+	<meta name="twitter:site" content="@melodyyunc">
+	<meta name="twitter:creator" content="@Melodyyunc">
+	<meta name="twitter:title" content="Be Accellent">
+	<meta name="twitter:description" content="Looking for a new accent? Try out this hilarious quiz!">
+	<meta name="twitter:image" content="https://media.giphy.com/media/l4hLAnH7GC9XaQkAo/giphy.gif">
+
+	<!--Site info-->
+	<meta property="og:url" content="https://www.your-domain.com/your-page.html" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Be Accellent" />
+	<meta property="og:description" content="Be Accellent is a fun quiz that tells you your true accent!" />
+	<meta property="og:image" content="https://media.giphy.com/media/l4hLAnH7GC9XaQkAo/giphy.gif" />
+
+	<title>Be Accellent</title>
+	<!--Load animate.css-->
+	<link rel="stylesheet" href="/public/styles/animate.css">
+	<!--Load google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="public/styles/style.css">
+	<!--svg morphing-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+	
+</head>
+<body>
+	<main class="wrapper">
+		<header>
+			<h1>Need a new accent?</h1>
+			<h2>We've got you! Become Accellent <i class="fas fa-arrow-down animated bounce infinite"></i></h2>
+			<div class="talking-faces">
+				<div class="shapeshifter play1" style="background-image: url(sprite_30fps.svg)"></div>
+				<div class="shapeshifter play2" style="background-image: url(sprite_30fps.svg)"></div>
+				<div class="shapeshifter play3" style="background-image: url(sprite_30fps.svg)"></div>
+				<div class="shapeshifter play4" style="background-image: url(sprite_30fps.svg)"></div>
+				<div class="shapeshifter play5" style="background-image: url(sprite_30fps.svg)"></div>
+			</div>
+		</header>
+		<div class="bubble-ca"></div>
+		<div class="bubble-no"></div>
+		<div class="bubble-hi"></div>
+		<div class="bubble-ja"></div>
+		<form class="quiz" action="">
+			<h3>Home is...</h3>
+			<div class="question country grid-col-3">
+				<input type="radio" name="country" id="uk" data-shakespeare='2' data-pirate='1' data-morse='0'
+				required>
+				<label for="uk">
+					<img src="public/assets/big-ben.svg" alt="flag of UK">
+					<p>United kingdom</p>
+				</label>
+				<input type="radio" name="country" id="easter-island" 
+				data-shakespeare='0' data-pirate='2' data-morse='1' required>
+				<label for="easter-island">
+					<img src="public/assets/easter-island.svg" alt="flag cuba">
+					<p>Easter Island</p>
+				</label>
+				<input type="radio" name="country" id="usa" data-shakespeare='1' data-pirate='0' data-morse='2' required>
+				<label for="usa">
+					<img src="public/assets/statue-of-liberty.svg" alt="flag of USA">
+					<p>USA</p>
+				</label>
+			</div>	
+			<h3>What brings you true happiness</h3>
+			<div class="question food grid-col-3">
+				<input type="radio" name="food" id="chicken" data-shakespeare='2' data-pirate='0' data-morse='1' required>
+				<label for="chicken">
+					<img src="public/assets/chicken.svg" alt="chicken">
+					<p>Chicken</p>
+				</label>
+				<input type="radio" name="food" id="apple" data-shakespeare='1' data-pirate='2' data-morse='0' required>
+				<label for="apple">
+					<img src="public/assets/apple.svg" alt="apple">
+					<p>Apple</p>
+				</label>
+				<input type="radio" name="food" id="donut" data-shakespeare='0' data-pirate='0' data-morse='2' required>
+				<label for="donut">
+					<img src="public/assets/donut.svg" alt="donut">
+					<p>Donut</p>
+				</label>
+			</div>
+			<h3>Your alter ego is...</h3>
+			<div class="question character grid-col-3">
+				<input type="radio" name="character" id="old-gentelman" data-shakespeare='1' data-pirate='0' data-morse='0' required>
+				<label for="old-gentelman">
+					<img src="public/assets/old-gentelman.svg" alt="Mr. Fancy Pants">
+					<p>Mr. Fancy Pants</p>
+				</label>
+				<input type="radio" name="character" id="batman" data-shakespeare='0' data-pirate='1' data-morse='2' required>
+				<label for="batman">
+					<img src="public/assets/batman.svg" alt="Batman">
+					<p>Batman</p>
+				</label>
+				<input type="radio" name="character" id="rocker-girl" data-shakespeare='0' data-pirate='2' data-morse='1' required>
+				<label for="rocker-girl">
+					<img src="public/assets/rocker-girl.svg" alt="Rocker Girl">
+					<p>Rocker Girl</p>
+				</label>
+			</div>
+			<h3>What's your poison?</h3>
+			<div class="question character grid-col-3">
+				<input type="radio" name="beverage" id="beer" data-shakespeare='1' data-pirate='2' data-morse='0' required>
+				<label for="beer">
+					<img src="public/assets/beer.svg" alt="beer">
+					<p>beer</p>
+				</label>
+				<input type="radio" name="beverage" id="wine" data-shakespeare='2' data-pirate='1' data-morse='0' required>
+				<label for="wine">
+					<img src="public/assets/wine.svg" alt="wine">
+					<p>Wine</p>
+				</label>
+				<input type="radio" name="beverage" id="poison" data-shakespeare='0' data-pirate='0' data-morse='3' required>
+				<label for="poison">
+					<img src="public/assets/poison.svg" alt="poison">
+					<p>Poison</p>
+				</label>
+			</div>
+			<input type="submit" value="Make me cool!">
+
+		</form>
+		<section class="giphy-and-translator grid-col-3">
+			<div class="result-title"></div>
+			<div class="results"></div>
+			<div class="giphy"></div>
+			<section class="translated-text hide"></section>
+		</section>
+		<div class="twitter-btn">
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Took a quiz and found my new accent! Find your&#39;s at Be Accellent!"
+			 data-via="melodyyunc" data-hashtags="Accellent" data-related="melodyyunc,hackeryou" data-show-count="false">Tweet</a>
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+
+	</main>
+	<!-- animate.js -->
+	<script src="public/scripts/library/anime.min.js"></script>
+	<!-- font awesome -->
+	<script defer src='https://use.fontawesome.com/releases/v5.0.9/js/all.js' integrity='sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl' crossorigin='anonymous'></script>
+	<!-- smooth scroll -->
+	<script src="public/scripts/library/smooth-scroll.polyfills.min.js"></script>
+	<!-- jquery -->
+	<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
+	<!-- main js -->
+	<script src="public/scripts/main.js"></script>
+</body>
+</html>
+
+<!-- Andrejs Kirma, Alfonso López-Sanz, Focus Lab, Pencil, corpus delicti from the Noun Project -->
