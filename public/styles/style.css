@@ -241,7 +241,7 @@ input[type="submit"]:active {
           box-shadow: none;
   top: 6px; }
 
-.twitter-btn {
+.social-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,9 +252,13 @@ input[type="submit"]:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  .twitter-btn .twitter-share-button {
+  .social-btn .twitter-share-button {
     border-radius: 2px;
     background: #F7FDFF; }
+  .social-btn .fb-like iframe {
+    border-radius: 2px;
+    background: #F7FDFF;
+    margin-left: 5px; }
 
 header {
   padding: 2rem;

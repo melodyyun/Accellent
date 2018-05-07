@@ -75,13 +75,6 @@ input[type="radio"]:checked+label{
     border: 10px solid $accent;
 }
 
-// input[type="submit"]{
-//     padding: 1rem 4rem;
-//     font-size: 1.5rem;
-//     display: block;
-//     margin: 2rem auto;
-// }
-
 input[type="submit"]{
     outline: none;
     border: none;
@@ -110,13 +103,20 @@ input[type="submit"]:active{
     top: 6px;
 }
 
-.twitter-btn{
+.social-btn{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     .twitter-share-button{
         border-radius: 2px;
         background: $background;
+    }
+    .fb-like{
+        iframe{
+            border-radius: 2px;
+            background: $background;
+            margin-left: 5px;
+        }
     }
 }
 

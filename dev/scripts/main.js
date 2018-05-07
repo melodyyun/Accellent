@@ -37,6 +37,10 @@ app.getTranslate = (language, userInput) => {
         dataType: 'json',
         data: {
             text: userInput,
+        },
+        timeout: 5000,
+        error: function (xhr, textStatus, errorThrown) {
+            alert('Too many API requests have been made to FunTranslations. This poor developer can only afford 5 API calls per hour :(');
         }
     }).then(function(res){
         console.log(res);
