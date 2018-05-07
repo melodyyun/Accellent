@@ -45,7 +45,6 @@ app.getTranslate = (language, userInput) => {
         $translatedText.removeClass('hide');
         $translatedText.append(`
         <p class="speech-bubble">${res.contents.translated}</p>`);
-        //check to see if this works -------------------------------------------------------------------------------------------
         app.smoothScroll('translated-text');
     });
 };
@@ -126,7 +125,6 @@ app.translatorOnSubmit = () => {
     $('.results').on('submit', $('.translator'), function(e){
         e.preventDefault();
         const userInput = $('.translator').val();
-        //console.log(userInput);
         app.getTranslate(app.userAccentResult, userInput);
         window.scrollTo(0, document.body.scrollHeight);
     });
@@ -169,11 +167,9 @@ app.parallax = (e) => {
 app.init = () => {
     app.parallax();
     app.quizOnSubmit();
-    //listen for translation form submit
     app.translatorOnSubmit();
 };
 
-//document.ready
 $(app.init());
 
 

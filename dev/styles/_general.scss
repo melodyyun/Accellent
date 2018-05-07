@@ -27,22 +27,23 @@ html body{
 //--------------
 //styling fonts
 //--------------
-h1{
-    font-size: 5rem;
+.main-title{
+    @include font(50);
     color: $accent;
-    text-shadow: 0 0 1.5rem $background;
+}
+h1{
+    @include font(30);
+    color: $accent;
 }
 
 h2{
-    font-size: 1.7rem;
+    @include font(20);
     color: $accentDark;
-    text-shadow: 0 0 1.5rem $background;
 }
 
 h3{
-    font-size: 1.5rem;
+    @include font(15);
     color: $accentDark;
-    text-shadow: 0 0 1.5rem $background;
 }
 
 //------------------------------------
@@ -124,7 +125,8 @@ input[type="submit"]:active{
 //------
 
 header{
-    margin: 0 auto;
+    padding: 2rem;
+    margin: 2rem auto;
     .svg-container{
         max-width: 500px;
         margin: 0 auto;
@@ -203,6 +205,7 @@ form{
 //--------
 .result-title{
     grid-column: 1/4;
+    font-size: 2rem;
 }
 .results{
     grid-column: 1/3;
@@ -243,6 +246,8 @@ iframe{
     height: 300px;
     width: 300px;
 }
+
+//hide elements
 .hide{
     display: none;
 }
@@ -279,6 +284,13 @@ iframe{
 //770
 @media (max-width: 770px){
     .wrapper{
+        header{
+            padding: 0.01rem;
+            margin: 0 auto;
+            .fa-arrow-down{
+                display: none;
+            }
+        }
         .grid-col-3{
             display: flex;
             flex-flow: row wrap;
@@ -292,7 +304,16 @@ iframe{
 }
 
 @media (max-width: 500px){
+    .fa-arrow-down{
+        display: none;
+    }
     .shapeshifter.play5{
+        display: none;
+    }
+}
+
+@media (max-width: 400px){
+    .shapeshifter.play4{
         display: none;
     }
 }
