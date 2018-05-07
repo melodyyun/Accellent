@@ -75,3 +75,9 @@ $grid-col-1: 1fr;
     animation-iteration-count: infinite;
     animation-delay: $delay;
 }
+
+//padding and margin
+@mixin spacing($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
